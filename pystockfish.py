@@ -128,9 +128,9 @@ class Engine(subprocess.Popen):
     engines.
     """
 
-    def __init__(self, depth=2, ponder=False, param={}, rand=False, rand_min=-10, rand_max=10):
+    def __init__(self, program='stockfish', depth=2, ponder=False, param={}, rand=False, rand_min=-10, rand_max=10):
         subprocess.Popen.__init__(self,
-                                  'stockfish',
+                                  program,
                                   universal_newlines=True,
                                   stdin=subprocess.PIPE,
                                   stdout=subprocess.PIPE, )
